@@ -45,44 +45,18 @@ app.controller('mainCtrl', function () {
 });
 app.controller('indexCtrl', function ($scope) {});
 app.controller('headerCtrl', function ($scope) {
-    $('#banner').change(function () {
-        var logoWidth = $('#banner').height() * 0.9;
-        var logoHeight = logoWidth * 1.7;
-
-        $('#logo').css({
-            width: "'" + logoWidth + "'", //logoWidth,
-            height: "'" + logoHeight + "'"//logoHeight
-        });
-    });
-    $('#sandwich').click(function () {
-        $('.linkSandwich').css({
-            display: 'none'
-        });
-        $('#asideLeft').slideToggle('slow');
-    });
+    
 });
-app.controller('asideLeft', function ($scope) {
-    $scope.toggleKontakt = function () {
-        $('#toggleKontakt').toggle(200);
-        $('#toggleKanzlei').hide(200);
-    };
-    $scope.toggleKanzlei = function () {
-        $('#toggleKanzlei').toggle(200);
-        $('#toggleKontakt').hide(200);
-    };
-    $scope.slideUp = function () {
-        $('#toggleKanzlei').slideUp(200);
-        $('#toggleKontakt').slideUp(200);
-    };
-    $('.aAsideNav').click(function () {
-        var screenWidth = $(window).width() + 17;
-        if (screenWidth <= 767) {
-            $('#asideLeft').slideUp('slow');
-            $('.linkSandwich').css({
-                display: 'block'
-            });
-        }
+app.controller('asideLeftCtrl', function ($scope) {    
+    $('#sandwich').click(function () {
+        $('#asideLeft').slideDown('slow');
+        $(this).slideUp('fast');        
     });
+    $('#asideLeft ul li a').click(function(){
+        $('#asideLeft').slideUp('slow');
+        $('#sandwich').slideDown('slow');
+    });
+    
 });
 
 app.controller('gebieteCtrl', function () {
