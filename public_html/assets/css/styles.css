@@ -141,6 +141,11 @@ article {
     padding: 4% 3%;    
     width: 94%;
 }
+iframe{    
+    padding:5%;
+    width:90%;
+    
+}
 footer {
     background: #255672;
     color: #fff;
@@ -217,6 +222,22 @@ footer {
     margin:0 4.57506361323155%;;
 }
 /**************UNTERSEITEN******************/
+#hausnummer, #klingel, #startPic{
+    float:left;
+    width:47%;
+    padding:0 0 50% 0;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    border-radius:5%;
+    box-shadow:0 0 1rem black;
+}
+#startPic{
+    width:95%;
+    margin:0 2.5%;
+    background-image:url('../images/Juristerei.jpg');
+    background-size:auto 100%;
+    box-shadow:none;
+}
 #article1Kanzlei, #articleDatenschutz, #hauptfeld, #articleImpressum{
     padding:1% 2%;
     background:whitesmoke;
@@ -257,6 +278,20 @@ input, textarea, select, #dataCheck, #inputSubmit{
 }
 #inputSubmit{
     font-size:1.3rem;
+}
+#imagesAdresse{
+    width:90%;
+    padding:2% 5%;
+}
+#hausnummer{
+    background-image:url('../images/Hausnummer.jpg');    
+}
+#klingel{
+    background-image:url('../images/Klingel.jpg'); 
+    background-size:100% 100%;
+    padding:0 0 40% 0;
+    margin:5% 0 0 0;
+    float:right;
 }
 
 /*Test background-size (bgs) */

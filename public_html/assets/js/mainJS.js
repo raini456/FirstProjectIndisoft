@@ -9,7 +9,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                     controller: 'indexCtrl'
                 })
                 .when('/home', {
-                    templateUrl: 'html/main.html',
+                    templateUrl: 'kanzlei/main.html',
                     controller: 'mainCtrl'
                 })
                 .when("/gebiete", {
@@ -19,7 +19,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                 .when("/person", {
                     templateUrl: 'kanzlei/person.html',
                     controller: 'personCtrl'
-                })                
+                })
                 .when("/email", {
                     templateUrl: 'kanzlei/email.html',
                     controller: 'emailCtrl'
@@ -37,7 +37,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                     controller: 'datenschutzCtrl'
                 })
                 .otherwise({
-                    redirectTo: 'html/main.html'
+                    redirectTo: 'kanzlei/main.html'
                 });
     }]);
 app.controller('mainCtrl', function () {
@@ -53,10 +53,10 @@ app.controller('headerCtrl', function ($scope) {
             width: "'" + logoWidth + "'", //logoWidth,
             height: "'" + logoHeight + "'"//logoHeight
         });
-    });    
+    });
     $('#sandwich').click(function () {
         $('.linkSandwich').css({
-            display:'none'
+            display: 'none'
         });
         $('#asideLeft').slideToggle('slow');
     });
@@ -79,34 +79,34 @@ app.controller('asideLeft', function ($scope) {
         if (screenWidth <= 767) {
             $('#asideLeft').slideUp('slow');
             $('.linkSandwich').css({
-                display:'block'
+                display: 'block'
             });
         }
-    });   
+    });
 });
 
 app.controller('gebieteCtrl', function () {
-    $('.familienrecht').click(function(){
+    $('.familienrecht').click(function () {
         $('#familienrecht').slideDown('slow');
         $('#arbeitsrecht, #erbrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('.arbeitsrecht').click(function(){
+    $('.arbeitsrecht').click(function () {
         $('#arbeitsrecht').slideDown('slow');
         $('#familienrecht, #erbrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('.erbrecht').click(function(){
+    $('.erbrecht').click(function () {
         $('#erbrecht').slideDown('slow');
         $('#familienrecht, #arbeitsrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('.verkehrsrecht').click(function(){
+    $('.verkehrsrecht').click(function () {
         $('#verkehrsrecht').slideDown('slow');
         $('#arbeitsrecht, #erbrecht, #familienrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('.mietrecht').click(function(){
+    $('.mietrecht').click(function () {
         $('#mietrecht').slideDown('slow');
         $('#verkehrsrecht, #arbeitsrecht, #erbrecht, #familienrecht, #sozialrecht').slideUp('slow');
     });
-    $('.sozialrecht').click(function(){
+    $('.sozialrecht').click(function () {
         $('#sozialrecht').slideDown('slow');
         $('#mietrecht, #verkehrsrecht, #arbeitsrecht, #erbrecht, #familienrecht').slideUp('slow');
     });
